@@ -1,0 +1,21 @@
+--> https://nextjs.org/docs/pages/api-reference/functions/use-router
+
+### 📦 `useRouter()` – Methods & Properties Table
+
+| Method / Property          | Type                    | Description                                                                 |
+|----------------------------|-------------------------|-----------------------------------------------------------------------------|
+| `push(url, options?)`      | `function`              | Navigates to the given URL, adding a new entry in the browser history.      |
+| `replace(url, options?)`   | `function`              | Same as `push`, but replaces current history entry (doesn't go back).       |
+| `refresh()`                | `function` (App Router) | Refreshes the current route's data without losing client state.             |
+| `back()`                   | `function`              | Navigates back in browser history (`window.history.back()`).                |
+| `forward()`                | `function`              | Goes forward in browser history (`window.history.forward()`).               |
+| `prefetch(url)`            | `function`              | Prefetches a route (only in `pages/` router, deprecated in App Router).     |
+| `pathname`                 | `string`                | Current route's path (e.g. `/dashboard/[id]`).                              |
+| `asPath`                   | `string`                | Actual URL shown in the browser (e.g. `/dashboard/123`).                    |
+| `query`                    | `object`                | Query params & dynamic route segments (e.g. `{ id: "123" }`).               |
+| `isFallback`               | `boolean`               | `true` if route is in fallback mode during SSG (Pages Router).              |
+| `isReady`                  | `boolean`               | Becomes `true` once router fields are updated client-side.                  |
+| `events`                   | `RouterEvents` object   | Used to listen to router lifecycle events (routeChangeStart, etc.).         |
+| `basePath`                 | `string`                | Returns the `basePath` defined in `next.config.js` (if any).                |
+| `locale` / `locales` / `defaultLocale` | `string/string[]` | Used with internationalization (i18n) routing.                            |
+
