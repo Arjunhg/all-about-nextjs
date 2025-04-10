@@ -1,0 +1,24 @@
+
+---
+
+**Prompt (Enhanced & Detailed):**
+
+> I have two React component files that are responsible for rendering games, but currently the UI lacks a strong visual identity or theme. I want you to completely revamp the styling and layout to give it a **game-centric look and feel**, specifically drawing inspiration from aesthetics like:
+>
+> - **Cyberpunk**: Neon lights, high contrast colors, glows, futuristic fonts
+> - **Metallic/Futuristic**: Steel textures, gradients, holographic UI elements, dark themes with electric accents
+>
+> The goal is to give users an immediate sense that they’re in a **gaming environment**, not a basic or generic web app. Think along the lines of what you might see in a game launcher, esports dashboard, or a sci-fi game menu.
+>
+> Requirements:
+> - Use a consistent and immersive **color palette** (e.g., neon purples, blues, teals, or metallic silvers and dark grays)
+> - Integrate **UI components** that resemble gaming UIs: buttons, cards, menus, hover/focus effects
+> - Add **stylistic effects**: gradients, subtle animations, glowing borders, etc.
+> - Use modern styling libraries or frameworks (like Tailwind CSS, styled-components, or CSS modules) to implement clean and scalable styles
+> - Ensure it looks good across screen sizes (responsive design)
+>
+> Bonus if:
+> - The UI has animated transitions (e.g., hover interactions, loading effects)
+> - Fonts and icons are styled to match the theme (maybe import a tech/futuristic Google font)
+
+---
