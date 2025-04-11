@@ -1,0 +1,71 @@
+---
+
+## 🔄 `redirect()` (from `next/navigation`)
+
+### ✅ Best for:
+- **Immediate redirects** on **server or client** (App Router)
+- No flashing of content
+- Used **outside of render cycle** (no need for buttons or hooks)
+
+### ❗ Caveat:
+- It’s a **hard redirect**, so the component doesn’t render anything.
+- You can’t show anything after `redirect()` — it *exits* early.
+
+```tsx
+redirect("/new-page"); // This will stop the page from rendering below
+```
+
+---
+
+## 🔁 Alternative 1: `useRouter().push()`
+
+```tsx
+"use client";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+
+const OldPage = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("/11.Redirect/new-page");
+  }, []);
+
+  return <div>Redirecting from old page...</div>;
+};
+```
+
+### ✅ Best for:
+- **Client-side** navigation (e.g., after a condition or timer)
+- You can show something during redirect (e.g., loading spinner)
+
+---
+
+## 🔗 Alternative 2: `<Link>`
+
+```tsx
+import Link from "next/link";
+
+const OldPage = () => (
+  <div>
+    This page has moved. <Link href="/11.Redirect/new-page">Go here</Link>
+  </div>
+);
+```
+
+### ✅ Best for:
+- **User-triggered** navigation (not automatic)
+- Accessible and prefetchable
+- Great for buttons/menus/inline links
+
+---
+
+## 🧠 TL;DR – Which to use?
+
+| Method              | When to use                                           |
+|---------------------|-------------------------------------------------------|
+| `redirect()`        | Auto-redirect **immediately**, no flash, **App Router only** |
+| `router.push()`     | Client-side **conditional or delayed** navigation     |
+| `<Link>`            | User-initiated navigation via clicks                  |
+
+---
