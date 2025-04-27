@@ -1,6 +1,4 @@
-import { Stats } from "fs"
-
-const State = () => {
+const Stats = () => {
 
     return(
         <div>
