@@ -1,0 +1,6 @@
+--> Which are copied from internet. Like the link of image
+--> Unlike the internal images, we need to specify width and height. Also we need to whitelist the domain:
+
+    images: {
+        domains: ['plus.unsplash.com'],
+    }
